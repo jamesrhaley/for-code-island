@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title></title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="main-wrapper group">
+    <div class="home group">
+
+    <!--This is the header  -->
+        <div id="headerbar" class="headerbar group">
+          <img id="icon-img" class="icon" src="img/codeIsland.png">
+          <div class="header-text">Rhode Island Open Data Candidate Questionnaire</div>
+          <div class="dropdown" id="dropdown">
+            <div class="about">
+              <h1>About</h1>
+              <p class="description">
+                We are representatives from (who all this represents). 
+                We are part of a national movement of citizens, 
+                technologists, and public servants working together to 
+                improve the quality of life in the Commonwealth through 
+                the use of information and technology. Given the success 
+                of open data initiatives at the local level, our goal is to open 
+                a dialogue for open data at the state level.
+              </p>
+            
+            
+         
+            
+              <h1>Contact</h1>
+              <p class="description">Email us at</p> 
+              <span>opendatapa@gmail.com</span>
+              
+              <p class="description">Tweet us at</p> 
+              <span></span>
+            
+              <span></span> 
+            </div>
+          </div>
+        </div>
+
+    <!--below are the home page question post  -->
+
+        <div class="posts-all group">
+
+          <div class="post">
+            <a href="question1.html">
+            <div class="title">Information as an asset</div>
+            <div class="detail">
+              <p class="text">
+                Many businesses, nonprofits, and government agencies view information as an asset. If elected, how will your administration increase access to this important asset for benefit of the Commonwealth?  
+              </p>
+              <div class="numberofresponses">
+                <div class="number">7 Responses</div>
+                <img class="arrow" src="img/arrow.png" ng-click="navigate('question1')">
+              </div>        
+            </div>
+            </a>
+          </div>
+
+          <div class="post">
+            <a href="question2.html">
+            <div class="title">Question 2</div>
+            <div class="detail">
+              <p class="text">
+                Public information is often siloed within various state agencies, and not always easily accessible to residents or other units of government. How will your administration improve information sharing in Pennsylvania?
+              </p>
+              <div class="numberofresponses">
+                <div class="number">7 Responses</div>
+                <img class="arrow" src="img/arrow.png" ng-click="navigate('question1')">
+              </div>        
+            </div>
+            </a>
+          </div>
+
+          <div class="post">
+            <a href="./question3.html">
+            <div class="title">Question 3</div>
+            <div class="detail">
+              <p class="text">
+                Open sharing of information and information technology has helped to improve the relationship between citizens and government. How will your administration use information and technology to better connect with citizens?
+              </p>
+              <div class="numberofresponses">
+                <div class="number">7 Responses</div>
+                <img class="arrow" src="img/arrow.png" ng-click="navigate('question1')">
+              </div>        
+            </div>
+            </a>
+          </div>
+
+          <div class="post">
+            <a href="./question4.html">
+            <div class="title">Question 4</div>
+            <div class="detail">
+              <p class="text">
+                Many datasets controlled by the state are subject to disclosure under the Open Records Law. Do you support making the default policy that such datasets are proactively available online according to commonly accepted open data guidelines (see FAQ for details)?<br></br>Please indicate Yes or No and explain your position.
+              </p>
+              <div class="numberofresponses">
+                <div class="number">7 Responses</div>
+                <img class="arrow" src="img/arrow.png" ng-click="navigate('question1')">
+              </div>        
+            </div>
+            </a>
+          </div>
+
+          <div class="post">
+            <a href="./question5.html">
+            <div class="title">Question 5</div>
+            <div class="detail">
+              <p class="text">
+                Current laws protecting personal privacy would still apply to all information released under an open data policy. Beyond this protected information, what specific data sets do you feel should be restricted for public access?
+              </p>
+              <div class="numberofresponses">
+                <div class="number">7 Responses</div>
+                <img class="arrow" src="img/arrow.png" ng-click="navigate('question1')">
+              </div>        
+            </div>
+            </a>
+          </div>
+
+          <div class="post">
+            <a href="./question6.html">
+            <div class="title">Question 6</div>
+            <div class="detail">
+              <p class="text">
+                Many cities and states around the U.S. are adopting open data policies and practices to share information with residents and other stakeholders. What are the 3 most important things you would do as governor to make state data “open”?
+              </p>
+              <div class="numberofresponses">
+                <div class="number">7 Responses</div>
+                <img class="arrow" src="img/arrow.png" ng-click="navigate('question1')">
+              </div>        
+            </div>
+            </a>
+          </div>        
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function expandHeader() {
+        var dropdown = document.getElementById( "dropdown" );
+        dropdown.style.height = dropdown.style.height === "400px" ? "0px" : "400px";
+    }
+
+    var header = document.getElementById("headerbar");
+
+    if( header.addEventListener ) {
+        header.addEventListener( 'click', expandHeader, false );
+    } else if( header.attachEvent ) {
+        header.attachEvent('onclick', function () { 
+            return expandHeader.apply( header, [window.event] )
+        });
+    }
+
+</script>
+</body>
+</html>
